@@ -12,19 +12,27 @@ class Student
   end
 
   def self.create_table
+    sql = <<-SQL
 
+    SQL
   end
 
   def self.drop_table
+    sql = <<-SQL
 
+    SQL
   end
 
   def save
+    sql = <<-SQL
 
+    SQL
   end
 
   def self.create
+    sql = <<-SQL
 
+    SQL
   end
 
 
