@@ -38,7 +38,7 @@ class Student
     DB[:conn].execute(sql, self.name, self.grade)
 
     new_id = DB[:conn].execute("SELECT students.id FROM students")
-    @id = new_id.join
+    @id = new_id.join.to_i
 
   end
 
