@@ -36,6 +36,10 @@ class Student
       VALUES (?, ?)
     SQL
     DB[:conn].execute(sql, @name, @grade)
+
+    new_id = DB[:conn].execute("SELECT students.id FROM students")
+    @id = new_id
+
   end
 
   def self.create
