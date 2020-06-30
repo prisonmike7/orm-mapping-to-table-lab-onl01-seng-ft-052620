@@ -35,7 +35,7 @@ class Student
       INSERT INTO students (name, grade)
       VALUES (?, ?)
     SQL
-    DB[:conn].execute(sql, @name, @grade)
+    DB[:conn].execute(sql, self.name, self.grade)
 
     new_id = DB[:conn].execute("SELECT students.id FROM students")
     @id = new_id
